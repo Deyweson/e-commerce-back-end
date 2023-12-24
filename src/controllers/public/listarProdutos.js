@@ -1,4 +1,4 @@
-const pool = require('../../src/config/conexaoDB');
+const pool = require('../../config/conexaoDB');
 
 const listarProdutos = async (request, response) => {
     const query = 'select nome_produto, valor, descricao from produtos where em_estoque = true';

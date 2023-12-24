@@ -1,4 +1,4 @@
-const pool = require('../../src/config/conexaoDB');
+const pool = require('../../config/conexaoDB');
 
 const cadastrarProd = async (request, response) => {
     const { nome_produto, valor, descricao, em_estoque } = request.body;

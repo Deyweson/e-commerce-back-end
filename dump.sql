@@ -7,8 +7,11 @@ create table produtos(
 );
 
 create table loja_info(
+    id serial primary key,
     nome_loja varchar (255) not null,
     whatsapp varchar (255) not null,
     telefone varchar (255),
-    url_insta varchar (255)
+    url_insta varchar (255),
+    usuario varchar(255),
+    senha varchar (255)
 );
