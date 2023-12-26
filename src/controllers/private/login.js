@@ -14,9 +14,7 @@ const login = async (request, response) => {
         return response.status(400).json({mensagem: 'Usuário e/ou senha inválido(s)'});
     };
 
-    const senhaJWT = process.env.JWTPASS
-    const token = jwt.sign({id: 1}, senhaJWT,{expiresIn: '10h'});
-
+    const token = jwt.sign({id: 1}, jwtPass,{expiresIn: '10h'});
 
     response.status(200).json({usuario, token});
 };

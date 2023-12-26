@@ -1,17 +1,15 @@
 const express = require('express');
-const listarProdutos = require('../controllers/public/listarProdutos');
-const cadastrarProd = require('../controllers/private/cadastrarProd');
+
+const { listarProdutos, pesquisarProduto } = require('../controllers/public/buscarProdutos');
+
 const login = require('../controllers/private/login');
+const { cadastrarProd, editarProd, produtos, removerProd } = require('../../src/controllers/private/gerenciadorProdutos')
 const autenticador = require('../../src/middleware/autenticador');
-const editarProd = require('../controllers/private/editarProd');
-const removerProd = require('../controllers/private/removerProd');
-const produtos = require('../controllers/private/produtos');
-const pesquisarProduto = require('../controllers/public/pesquisarProd');
+
 const routes = express();
 
 routes.get('/produtos', listarProdutos);
 routes.get('/pesquisarProdutos', pesquisarProduto);
-
 
 routes.post('/login', login);
 routes.use(autenticador);
