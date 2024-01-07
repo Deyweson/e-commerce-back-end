@@ -15,6 +15,12 @@ const produtos = async (request, response) => {
 const cadastrarProd = async (request, response) => {
     const { nome_produto, valor, descricao, em_estoque } = request.body;
 
+		const podeCasdastrar = await pool.query('select qtd, qtdmax from loja_info')
+		
+		if(podeCasdastrar.rows[0].qtd >= podeCasdastrar.rows[0].qtdmax){
+			return response.status(404).json({mensagem: 'Limite de cadastro de produtos exedido!'})
+		}
+
     const query = (`
         insert into produtos
         (nome_produto, valor, descricao, em_estoque)
@@ -25,6 +31,8 @@ const cadastrarProd = async (request, response) => {
     const values = [nome_produto, valor, descricao, em_estoque];
 
     const novoProduto = await pool.query(query, values);
+		const atualizarQTD = await pool.query(
+			`update loja_info set qtd = $1`, [podeCasdastrar.rows[0].qtd+1]);
 
     return response.status(200).json({
         mensagem: "produto cadastrado com sucesso", 
@@ -71,6 +79,10 @@ const removerProd = async (request, response) => {
     const values = [id];
 
     await pool.query(query, values);
+
+		const qtd = await pool.query('select qtd from loja_info')
+		const atulizarQTD = await pool.query(`update loja_info set qtd = $1`, [qtd.rows[0].qtd-1])
+
 
     return response.status(200).json({mensagem: 'Produto removido com sucesso!'});
 };

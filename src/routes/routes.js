@@ -5,11 +5,13 @@ const { listarProdutos, pesquisarProduto } = require('../controllers/public/busc
 const login = require('../controllers/private/login');
 const { cadastrarProd, editarProd, produtos, removerProd } = require('../../src/controllers/private/gerenciadorProdutos')
 const autenticador = require('../../src/middleware/autenticador');
+const pedido = require('../controllers/public/pedido');
 
 const routes = express();
 
 routes.get('/produtos', listarProdutos);
 routes.get('/pesquisarProdutos', pesquisarProduto);
+routes.get('/pedido', pedido);
 
 routes.post('/login', login);
 routes.use(autenticador);
