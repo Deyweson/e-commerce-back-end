@@ -1,8 +1,15 @@
 # API PedeAQUi
 ## Descrição
-Api para uma loja, poder exibir seus produtos para seus cliente, permitindo realizar pedidos via whatsapp, realizando uma mensagem dinamica com varios itens no pedido. Permite a loja poder criar novos produtos, atualizar e remover seus produtos.
-Api inicialmente criada para uso de apenas uma loja, mas pretendo criar a possibilidade de criação de varias lojas simultaneamente.
-Na versão atual ela pode ser testada publicamente online ou localmente na sua maquina.
+### Objetivos
+Api para uma loja, poder exibir seus produtos para seus clientes, permitindo realizar pedidos via whatsapp, realizando uma mensagem dinamica com varios itens no pedido. Permite a loja poder criar novos produtos, atualizar e remover seus produtos.
+
+Inicialmente criada para utilização de apenas uma loja, futuramente penso em fazer implementações para poder ser utilizada por multiplas lojas
+
+### Tecnologias utilizadas
+- nodejs
+- postgresql
+- Jason Web Token
+- Express
 
 ## Testando online
 
