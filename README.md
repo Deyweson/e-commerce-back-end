@@ -27,7 +27,7 @@ Certifique-se de que você possui os seguintes pré-requisitos instalados em seu
 Clone o repositório do projeto para o seu ambiente local. Você pode usar o comando git clone no terminal.
 
 ``` bash
-git clone 
+git clone https://github.com/Deyweson/pede-aqui-back-end.git
 ```
 
 ## Instalar as dependências
