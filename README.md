@@ -82,7 +82,7 @@ Endpoint destinado a listar os produtos publicamente, todos os produtos que esti
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/produtos
 
 
 #### Retorno:
@@ -101,7 +101,7 @@ Endpoint destinado a buscar produtos utilizando um trecho de texto passado no qu
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/pesquisarProdutos?buscar=
 
 
 #### Retorno:
@@ -121,7 +121,7 @@ Endpoint destinado a realizar um pedido via whatsapp, a requisição pode ser fe
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/pedido
 
 #### Corpo da requisição:
 
@@ -153,7 +153,7 @@ Rota destinada para login da loja, que retorna um token para autorizar o cadastr
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/login
 
 #### Corpo da requisição:
 
@@ -178,7 +178,7 @@ Endpoint destinado para vizualização dos produtos pelo administrador da loja, 
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/listarProdutos
 
 #### Retorno:
 
@@ -199,7 +199,7 @@ Endpoint destinado ao cadastro de produtos, inserindo o nome, valor descrição 
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/cadastrarProduto
 
 #### Corpo da requisição:
 
@@ -230,7 +230,7 @@ Endpoint destinado a atualização do produto.
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/editarProduto
 
 #### Corpo da requisição:
 | Parâmetro | Tipo | Descrição|
@@ -258,7 +258,7 @@ Endpoint destinado a remover produto da loja. É passado o id do produto que ser
 
 #### Endpoint:
 
-	http://localhost:3000/cadastrar-loja
+	https://pede-aqui.cyclic.app/removerProduto/:id
 
 #### Retorno:
 
